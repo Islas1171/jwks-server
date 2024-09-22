@@ -18,6 +18,11 @@ The server will start on `http://localhost:8080`.
 Returns the public RSA keys in JWKS format.
 curl http://localhost:8080/jwks
 
+## Code console
+
+![image](https://github.com/user-attachments/assets/1d0826ed-562b-4088-af01-b65df8cbaecc)
+
+
 ## Coverage
 
 
