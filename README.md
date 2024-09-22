@@ -1,24 +1,19 @@
-# JWKS Server
-
-## Overview
-
-This project implements a simple JWKS (JSON Web Key Set) server with a RESTful API that provides public keys and signs JWT tokens.
-
-### Endpoints
-
-- `/jwks`: Returns the JWKS with public keys.
-- `/auth`: Returns a JWT signed with an RSA key. Optionally returns an expired JWT when the `expired` query parameter is passed.
-
-## How to Run
-
-1. Clone the repository.
-2. Install dependencies using `pip install -r requirements.txt`.
-3. Run the server: `python app.py`.
-4. Access the API via `localhost:8080`.
-
-## Example Requests
-
-- Get public keys:
-  ```bash
-  curl http://localhost:8080/jwks
-# jwks-server
+# JWKS Server in Python
+This project implements a simple JWKS server using Flask, JWT, and RSA keys. It provides an authentication endpoint to issue JWTs and serves public keys in JWKS format.
+## Need to download
+- Python
+- Flask
+- PyJWT
+- Cryptography
+1. Clone the repository:
+    git clone https://github.com/<your-repo>/jwks-server-python.git
+    cd jwks-server-python
+2. Install the required packages:
+    pip install Flask pyjwt cryptography
+3. Run the Flask server:
+    python jwks_server.py
+The server will start on `http://localhost:8080`.
+## Endpoints
+### `/jwks` (GET)
+Returns the public RSA keys in JWKS format.
+curl http://localhost:8080/jwks
